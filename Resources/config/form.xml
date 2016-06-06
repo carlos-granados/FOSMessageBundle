@@ -27,21 +27,21 @@
         </service>
 
         <service id="fos_message.new_thread_form.handler.default" class="FOS\MessageBundle\FormHandler\NewThreadMessageFormHandler" public="false">
-            <argument type="service" id="request" />
+            <argument type="service" id="request_stack" />
             <argument type="service" id="fos_message.composer" />
             <argument type="service" id="fos_message.sender" />
             <argument type="service" id="fos_message.participant_provider" />
         </service>
 
         <service id="fos_message.new_thread_multiple_form.handler" class="FOS\MessageBundle\FormHandler\NewThreadMultipleMessageFormHandler" public="false">
-            <argument type="service" id="request" />
+            <argument type="service" id="request_stack" />
             <argument type="service" id="fos_message.composer" />
             <argument type="service" id="fos_message.sender" />
             <argument type="service" id="fos_message.participant_provider" />
         </service>
 
         <service id="fos_message.reply_form.handler.default" class="FOS\MessageBundle\FormHandler\ReplyMessageFormHandler" public="false">
-            <argument type="service" id="request" />
+            <argument type="service" id="request_stack" />
             <argument type="service" id="fos_message.composer" />
             <argument type="service" id="fos_message.sender" />
             <argument type="service" id="fos_message.participant_provider" />
