@@ -27,9 +27,9 @@ class QueryFactory implements QueryFactoryInterface
      * @param Request $request
      * @param string $queryParameter
      */
-    public function __construct(Request $request, $queryParameter)
+    public function __construct($requestStack, $queryParameter)
     {
-        $this->request = $request;
+        $this->request = $requestStack->getCurrentRequest();
         $this->queryParameter = $queryParameter;
     }
 
