@@ -59,7 +59,7 @@
         </service>
 
         <service id="fos_message.search_query_factory.default" class="FOS\MessageBundle\Search\QueryFactory" public="true">
-            <argument type="service" id="request" />
+            <argument type="service" id="request_stack" />
             <argument /> <!-- query parameter containing the search terms -->
         </service>
 
