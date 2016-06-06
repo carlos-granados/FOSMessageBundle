@@ -2,7 +2,6 @@
 
 namespace FOS\MessageBundle\Security;
 
-use Symfony\Component\Security\Core\SecurityContextInterface;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use FOS\MessageBundle\Model\ParticipantInterface;
 
@@ -16,11 +15,10 @@ class ParticipantProvider implements ParticipantProviderInterface
     /**
      * The security context
      *
-     * @var SecurityContextInterface
      */
     protected $securityContext;
 
-    public function __construct(SecurityContextInterface $securityContext)
+    public function __construct($securityContext)
     {
         $this->securityContext = $securityContext;
     }
