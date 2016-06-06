@@ -3,12 +3,15 @@
 namespace FOS\MessageBundle\Controller;
 
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Symfony\Component\DependencyInjection\ContainerAware;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use FOS\MessageBundle\Provider\ProviderInterface;
+use Symfony\Component\DependencyInjection\ContainerAwareInterface;
+use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 
-class MessageController extends ContainerAware
+class MessageController implements ContainerAwareInterface
 {
+    use ContainerAwareTrait;
+
     /**
      * Displays the authenticated participant inbox
      *
