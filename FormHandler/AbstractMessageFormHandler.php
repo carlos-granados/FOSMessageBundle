@@ -22,9 +22,9 @@ abstract class AbstractMessageFormHandler
     protected $sender;
     protected $participantProvider;
 
-    public function __construct(Request $request, ComposerInterface $composer, SenderInterface $sender, ParticipantProviderInterface $participantProvider)
+    public function __construct($request_stack, ComposerInterface $composer, SenderInterface $sender, ParticipantProviderInterface $participantProvider)
     {
-        $this->request = $request;
+        $this->request = $request_stack->getCurrentRequest();
         $this->composer = $composer;
         $this->sender = $sender;
         $this->participantProvider = $participantProvider;
